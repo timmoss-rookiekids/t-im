@@ -1,0 +1,39 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "9c5a5aa52800b0e3721dabcd8d122eb9"
+name = "TIm"
+handle = "tim-4"
+application_url = "https://better-manual-terry-way.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-ee5a815a.myshopify.com"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://example.com/api/auth",
+  "https://rating-fathers-reconstruction-phase.trycloudflare.com/auth/callback",
+  "https://rating-fathers-reconstruction-phase.trycloudflare.com/auth/shopify/callback",
+  "https://rating-fathers-reconstruction-phase.trycloudflare.com/api/auth/callback",
+  "https://hereby-cg-knee-server.trycloudflare.com/auth/callback",
+  "https://hereby-cg-knee-server.trycloudflare.com/auth/shopify/callback",
+  "https://hereby-cg-knee-server.trycloudflare.com/api/auth/callback",
+  "https://better-manual-terry-way.trycloudflare.com/auth/callback",
+  "https://better-manual-terry-way.trycloudflare.com/auth/shopify/callback",
+  "https://better-manual-terry-way.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[pos]
+embedded = false
